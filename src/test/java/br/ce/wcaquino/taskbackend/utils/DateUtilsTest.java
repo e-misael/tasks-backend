@@ -12,13 +12,13 @@ public class DateUtilsTest {
         Assert.assertTrue(DateUtils.isEqualOrFutureDate(localDate));
     }
     @Test
-    public void testShouldReturnTrueForPastDate(){
-        LocalDate localDate = LocalDate.now().minusDays(1);
+    public void testShouldReturnTrueForTheCurrentDate(){
+        LocalDate localDate = LocalDate.now();
         Assert.assertTrue(DateUtils.isEqualOrFutureDate(localDate));
     }
     @Test
-    public void testShouldReturnTrueForTheCurrentDate(){
-        LocalDate localDate = LocalDate.now();
+    public void testShouldReturnFalseForPastDate(){
+        LocalDate localDate = LocalDate.now().minusDays(1);
         Assert.assertFalse(DateUtils.isEqualOrFutureDate(localDate));
     }
 

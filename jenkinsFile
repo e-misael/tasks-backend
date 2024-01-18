@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Build Backend'){
+            steps {
+                bat 'mvn clean package skipTests=true'
+            }
+        }
+    }
+    stages {
+        stage ('Middle'){
+            steps {
+                bat 'echo Middle'
+            }
+        }
+    }
+}

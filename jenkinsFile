@@ -7,11 +7,4 @@ pipeline {
             }
         }
     }
-    stages {
-        stage ('Middle'){
-            steps {
-                bat 'echo Middle'
-            }
-        }
-    }
 }
